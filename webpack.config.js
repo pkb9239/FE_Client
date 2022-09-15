@@ -13,9 +13,18 @@ module.exports = {
   entry: {
     app: path.join(__dirname, "index.tsx"),
   },
-
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx"],
+    alias: {
+      "@src": path.resolve(__dirname, "src"),
+      "@atoms": path.resolve(__dirname, "src/components/atoms"),
+      "@organisms": path.resolve(__dirname, "src/components/organisms"),
+      "@pages": path.resolve(__dirname, "src/components/pages"),
+      "@routes": path.resolve(__dirname, "src/routes"),
+      "@utils": path.resolve(__dirname, "src/utils"),
+      "@constants": path.resolve(__dirname, "src/constants"),
+      "@styles": path.resolve(__dirname, "src/styles"),
+    },
   },
 
   module: {
